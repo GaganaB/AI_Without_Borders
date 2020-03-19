@@ -1,0 +1,15 @@
+The goal here is to given a movie review, classify whether it is a positive review or a negative review. A classic ML question.
+
+The code presented has the basic approach to this problem, and with a little more work (than I did), you should be able to get 
+really good performance on the test set.
+
+The approach I followed is as follows:
+  1. Build a tfidf vectorizer to get a representation of the review.
+  2. Use those vectors as input to a classifier (a logisitic regression model) in this case.
+  3. Test it on the test set.  (Pro advice: Do not test the model on the test set until you are confident about your model. If the training data is more, split it down to training set and validation set and do all the parameter tuning/model identification on that dataset and use the test set to do a final test. FYI, it is harder than it sounds because in the real world, it is very hard to gauge which model is the best just on the validation data as the model building process is usually iterative).
+  
+The baseline accuracy I have on the test set is 63.3%, which is not bad for the effort I put in. Here are some other approaches that you could try:
+  1. Use a different classifier.
+  2. Use word2vec/glove (distributional semantic vectors) instead of tfidf for input representation.
+  3. Did you know that you could use CNNs for text classification? Well, you can and it gives great performance and takes less
+  resources compared to RNNs. (Self brag - check this work out - https://arxiv.org/abs/1804.00968)
