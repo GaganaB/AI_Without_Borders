@@ -1,3 +1,0 @@
-Taking the hint - People who think something of nothing is half. 
-Mathematically, that means f(x = 0) = 0.5
-Which points towards the sigmoid function and the given curve is in accordance to the above principles. 
