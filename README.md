@@ -11,3 +11,5 @@ A GitHub/gitlab account for that is how you’ll probably submit your answers. I
 You'll be given access to three questions where the difficulty level gradually increases! So, suit yourself accordingly.
 
 Thanks to Tony Holdroyd, Daniel J Broz, and Kevin Garda for their help and support. Special thanks to Prudhvi Raj!
+
+Edit #1: Solutions have been updated!
