@@ -1,0 +1,7 @@
+You were literally ask to code the tanh activation function (https://en.wikipedia.org/wiki/Hyperbolic_function)
+
+The solution here does it in two ways:
+  1. Using only numpy's exp function (aka the pretentitous way)
+  2. Using numpy's tanh function (https://docs.scipy.org/doc/numpy/reference/generated/numpy.tanh.html)
+  
+There is a sanity check function written to check where your output is right or not. If not, the assertion will fail.
