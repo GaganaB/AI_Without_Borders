@@ -1,0 +1,8 @@
+This question is called Separate But I Already Know because the main challenge is to cluster things....conditionally.
+
+You are given a set of 102 images (51 male and 51 female) and your goal is cluster them into, you know, male and female.
+
+The approach in the baseline is fairly simple.
+  1. Flatten the images 
+  2. Apply a clustering algorithm (agglomerative clustering in this case)
+  3. Check score.
