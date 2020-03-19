@@ -1,0 +1,19 @@
+In this problem, we are given a patch of an object and an image
+with an object, and the objective is to use the patch to find the location of the image. 
+
+Here I am using a version of the Sobel-Feldman filter (https://en.wikipedia.org/wiki/Sobel_operator).
+
+The process I used is as follows.
+
+1. Apply the Scharr or any edge filter of your choice on the target image. This should give you all the edges.
+2. To clear the noise out a bit, use a threshold and change anything less than that value to 0.
+3. Once you have this image, use the given object as a filter and apply convolution on the thresholded image.
+4. Do the thresholding again to make things more cleaner and purer so that it makes the next step easy.
+5. Find the spot where the intensity is high and take that position.
+6. That position +/- your filter size should give you the approximate location of the object.
+7. Return the normalized coordinates of that position and if it the sum of absolute distance between the ground truth and 
+your predicted position is <0.05, you did good. If not, you still did good. Cheer up.
+8. (Optional & Not in Code because I was lazy) - Use the positions to draw a box around the object to show off to your friends.
+You gotta brag about something. 
+
+images.txt in Testing_Images has the ground truth coordinates.
