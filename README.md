@@ -12,4 +12,4 @@ You'll be given access to three questions where the difficulty level gradually i
 
 Thanks to Tony Holdroyd, Daniel J Broz, and Kevin Garda for their help and support. Special thanks to Prudhvi Raj!
 
-Edit #1: Solutions have been updated!
+Edit #1: Solutions have been updated! Credits: Prudvi Raj. 
