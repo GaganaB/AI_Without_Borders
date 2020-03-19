@@ -1,0 +1,32 @@
+This is a slighty harder version of the object recognition problem. 
+
+Given a set of images with a common object, find a way to use them to isolate the object so that
+you can use it to detect the same in other images.
+
+And if you read the sentence above right, it is a two step process.
+
+Step 1:
+  1. Take the image in the Patch folder in this case.
+  2. Apply a convolution using an edge filter of your choice.
+  3. Use some type of thresholding to avoid noise (basically reducing anything below a certain value to 0).
+  4. Keep playing around with the threshold (I mean it is between 0-255, so not a big deal) until you get a clear
+     vision of the object.
+  5. Save the image. Open it in a photo editor of your choice and crop just that object.
+  6. If you are feeling adventurous, crop it using code. (There are much easier ways to do this, *whispers* like step 5.)
+  7. Save that patch as an .jpg file or something.
+  
+This concludes the "isolation of the object" part. 
+Now it is time for using that object to find objects like that in other images, which is step 2.
+
+Step 2.
+  1. Apply an edge filter of your choice on the target image. (I used Scharr) This should give you all the edges.
+  2. To clear the noise out a bit, use a threshold and change anything less than that value to 0.
+  3. Once you have this image, use the saved patch from step 1 as a filter and apply convolution on the thresholded image.
+  4. Do the thresholding again to make things more cleaner and purer so that it makes the next step easy.
+  5. Find the spot where the intensity is high and take that position.
+  6. That position +/- your filter size should give you the approximate location of the object.
+  7. Return the normalized coordinates of that position and if it the sum of absolute distance between the ground truth and 
+   your predicted position is <0.05, you did good. If not, you still did good. Cheer up.
+  8. (Optional & Not in Code because I was lazy) - Use the positions to draw a box around the object to show off to your     friends. You gotta brag about something. 
+
+images.txt in Testing_Images has the ground truth coordinates.
